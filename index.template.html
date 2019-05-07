@@ -2404,8 +2404,9 @@ Example <a href="#webhook-example-serialization"></a> illustrates how Events can
   When a default language is specified by assigning a value to <code>@language</code>
   in the <code>@context</code> of a <a href="#sec-thing-as-a-whole-json">Thing object</a>,
   that default language is associated with the string values assigned to
-  <code>title</code> and <code>description</code> within the TD
-  and to <code>name</code> and <code>support</code> in the Thing object.
+  <code>title</code> and <code>description</code> within the TD.
+  If no value is given for <code>supportLanguage</code>, the default language is also used for
+  the values of <code>name</code> and <code>support</code> in the Thing object.
   </p>
   <p>
   Another possibility is to set the default language with
@@ -2418,6 +2419,15 @@ Example <a href="#webhook-example-serialization"></a> illustrates how Events can
   when the texts are served as a result of such negotiation.</span>
   Note however that constrained devices may choose to not support dynamically-generated TDs
   and do not need to support this feature.
+  It is also possible that content negotiation will result in a default language
+  that uses a different text direction than the language used in <code>name</code> and <code>support</code>.
+  <span class="rfc2119-assertion" id="td-ns-multilanguage-support-override">
+  When the default
+  language has a different text direction than the language used for <code>name</code>
+  and <code>support</code>, 
+  then a [[!BCP47]] language tag, including a script subtag if necessary to
+  unambiguously define the text direction,
+  MUST be provided as a value for <code>supportLanguage</code></span>.
   </p>
   <p>
   As noted earlier, the base text direction used to display human-readable text is also inferred 

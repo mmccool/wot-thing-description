@@ -323,7 +323,13 @@
          
          rdfs:comment "Provides information about the TD maintainer (e.g., author, link or telephone number to get support, etc)."@en .
 
+###  http://www.w3.org/2019/td#supportLanguage
 
+:supportLanguage rdf:type owl:DatatypeProperty ;
+         
+         rdfs:label "supportLanguage" ;
+         
+         rdfs:comment "Defines, using a [[!BCP47]] language tag (potentially with a script subtag if necessary to unambiguously specify the base text direction) the language used in the values associated with the terms <code>name</code> and <code>support</code> in the <code>Thing</code> object.  If present, this overrides the default language for these values only."@en .
 
 
 

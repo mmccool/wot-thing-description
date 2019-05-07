@@ -137,47 +137,52 @@
         sh:order "8"^^xsd:integer ;
     ] ;
     sh:property [
+        sh:path td:supportLanguage ;
+        sh:datatype xsd:string ;
+        sh:order "9"^^xsd:integer ;
+    ] ;
+    sh:property [
         sh:path td:base ;
         sh:datatype xsd:anyURI ;
-        sh:order "9"^^xsd:integer ;
+        sh:order "10"^^xsd:integer ;
     ] ;
     sh:property [
         sh:path td:properties ;
         sh:class td:PropertyAffordance ;
-        sh:order "10"^^xsd:integer ;
+        sh:order "11"^^xsd:integer ;
     ] ;
     sh:property [
         sh:path td:actions ;
         sh:class td:ActionAffordance ;
-        sh:order "11"^^xsd:integer ;
+        sh:order "12"^^xsd:integer ;
     ] ;
     sh:property [
         sh:path td:events ;
         sh:class td:EventAffordance ;
-        sh:order "12"^^xsd:integer ;
+        sh:order "13"^^xsd:integer ;
     ] ;
     sh:property [
         sh:path td:links ;
         sh:class lnk:Link ;
-        sh:order "13"^^xsd:integer ;
+        sh:order "14"^^xsd:integer ;
     ] ;
     sh:property [
         sh:path td:forms ;
         sh:class lnk:Form ;
-        sh:order "14"^^xsd:integer ;
+        sh:order "15"^^xsd:integer ;
     ] ;
     sh:property [
         sh:path td:security ;
         sh:minCount 1 ;
 #       sh:class wotsec:SecurityScheme ;
         sh:datatype xsd:string ;
-        sh:order "15"^^xsd:integer ;
+        sh:order "16"^^xsd:integer ;
     ] ;
     sh:property [	
         sh:path td:securityDefinitions ;	
         sh:minCount 1 ;
         sh:class wotsec:SecurityScheme ;	
-        sh:order "16"^^xsd:integer ;
+        sh:order "17"^^xsd:integer ;
     ].
     
 :InteractionAffordanceShape a sh:NodeShape ;
